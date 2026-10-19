@@ -1,0 +1,61 @@
+@charset "UTF-8";
+:root{--ink:#e8f1ff;--muted:#a8bddb;--line:#203b68;--paper:rgba(5,17,39,.94);--bg:#020817;--blue:#43a5ff;--blue-light:#102d59;--gold:#58baff;--gold-light:#16375e;--radius:10px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.5;background:radial-gradient(ellipse at 18% 8%,rgba(20,93,195,.35),transparent 32%),radial-gradient(ellipse at 85% 35%,rgba(0,116,255,.2),transparent 34%),linear-gradient(135deg,#020817 0%,#071b3b 48%,#020817 100%);background-attachment:fixed;position:relative}
+/* 컴퓨터·코딩 분위기의 배경 패턴 */
+body:before{content:"</>   { }   01   10   CSS   HTML   CODE   //";position:fixed;inset:0;z-index:-1;pointer-events:none;display:flex;align-items:center;justify-content:center;overflow:hidden;color:rgba(73,157,255,.075);font:900 clamp(2rem,7vw,7rem)/1.8 Consolas,monospace;letter-spacing:.12em;word-spacing:.5em;transform:rotate(-17deg);text-align:center}
+a{color:inherit}
+.container{width:min(1100px,calc(100% - 40px));margin-inline:auto}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:20;background:#071a36;color:#fff;padding:10px 14px;border:2px solid var(--blue)}
+.skip-link:focus{top:12px}
+.site-header{background:linear-gradient(110deg,rgba(3,14,33,.98),rgba(8,35,77,.96));border-top:5px solid #287de0;border-bottom:1px solid #1b4d8a;box-shadow:0 10px 35px rgba(0,0,0,.28)}
+.header-inner{min-height:0;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;position:relative}
+.identity{min-width:0}
+.eyebrow,.section-label{margin:0 0 4px;color:#56b7ff;font-size:.72rem;font-weight:800;letter-spacing:.14em}
+h1,h2,p{margin-top:0}
+h1{font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.12;letter-spacing:-.035em;margin-bottom:7px;color:#f4f8ff}
+.school{font-weight:700;margin-bottom:4px;color:#c9e2ff}
+.intro{margin:0;max-width:650px;color:#b8cde8}
+.github-link{flex:none;display:inline-flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid #2b73bd;border-radius:7px;background:#0b2850;color:#bde4ff;text-decoration:none;font-weight:700;white-space:nowrap;box-shadow:inset 0 0 16px rgba(42,139,255,.08)}
+.github-link:hover,.github-link:focus-visible,.course-link:hover,.course-link:focus-visible{text-decoration:underline;box-shadow:0 0 0 2px rgba(67,165,255,.22)}
+main{padding:0 22px 36px;background:rgba(2,11,27,.88);border-left:1px solid rgba(53,112,184,.35);border-right:1px solid rgba(53,112,184,.35);box-shadow:0 18px 55px rgba(0,0,0,.22)}
+.section{padding:25px 0;border-bottom:1px solid var(--line);scroll-margin-top:12px}
+.section-heading{margin-bottom:14px}
+.section-heading h2{font-size:clamp(1.35rem,2.5vw,1.8rem);letter-spacing:-.025em;margin:0 0 4px;color:#f0f6ff}
+.section-heading>p:last-child{margin-bottom:0;color:var(--muted)}
+.table-wrap{overflow-x:auto;background:rgba(5,18,41,.9);border:1px solid #204b83;border-radius:var(--radius);box-shadow:0 8px 26px rgba(0,0,0,.16)}
+table{width:100%;border-collapse:collapse;table-layout:fixed;text-align:left;min-width:640px;border:1px solid #244b7b}
+caption{text-align:left;padding:10px 14px;color:var(--muted);font-size:.88rem;font-weight:600}
+th,td{padding:12px 14px;border:1px solid #1b3b67;vertical-align:top;overflow-wrap:anywhere}
+th{background:linear-gradient(90deg,#103d7a,#0b2b57);color:#d8edff;font-size:.9rem;font-weight:800}
+tbody tr:nth-child(even){background:rgba(18,43,79,.55)}
+tbody tr:hover{background:rgba(23,73,125,.55)}
+th:nth-child(1){width:16%}th:nth-child(2){width:15%}th:nth-child(3){width:44%}th:nth-child(4){width:25%}
+td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;background:#173d78;color:#d6eaff;padding:2px 8px;border:1px solid #2b6bb1;border-radius:5px;font-size:.82rem;font-weight:700;white-space:nowrap}
+.hint{font-size:.84rem;color:#9db5d5;margin:10px 0 0}
+.course-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.course-list li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 15px;background:linear-gradient(110deg,rgba(12,34,68,.96),rgba(5,20,44,.96));border:1px solid #1e416f;border-radius:7px;min-width:0;box-shadow:inset 0 1px rgba(126,185,255,.04)}
+.course-name{font-weight:700;overflow-wrap:anywhere}
+.course-type{flex:none;font-size:.8rem;font-weight:700;padding:3px 9px;border-radius:20px}
+.major{background:#123f83;color:#c6e4ff;border:1px solid #2a6ec0}.liberal{background:#124e5b;color:#b8f6ee;border:1px solid #247e88}
+.course-link{color:#65c4ff;text-decoration:underline;text-underline-offset:3px}
+.week-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.week-grid li{min-width:0}
+.week-card{min-height:88px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;gap:8px;border-radius:7px;border:1px solid #254b7b;background:rgba(7,25,53,.96);text-decoration:none}
+a.week-card{transition:transform .15s ease,border-color .15s ease}
+a.week-card:hover,a.week-card:focus-visible{transform:translateY(-2px);border-color:#55b8ff;outline:2px solid transparent;box-shadow:0 0 0 2px rgba(65,160,255,.2),0 8px 20px rgba(0,0,0,.2)}
+.week-card>span{font-size:1.12rem;font-weight:800}
+.week-card small{font-size:.77rem;color:#9fb7d7}
+.week-card.complete{background:linear-gradient(145deg,#10468e,#0b2a5a);border-color:#276bb8;color:#e1f2ff}
+.week-card.complete small{color:#a9d9ff}
+.week-card.planned{background:rgba(28,42,63,.8);color:#a6b3c7;border-color:#354a67;border-style:dashed}
+.week-card.planned small{color:#a6b3c7}
+.site-footer{background:#030d20;color:#b9d9ff;padding:17px 0;border-top:1px solid #1c4b80}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.footer-inner p{margin:0;color:#b9d9ff;font-size:.9rem}
+@media(min-width:721px){.header-inner{padding-block:18px}.section{padding-block:22px}}
+@media(max-width:720px){.container{width:calc(100% - 28px)}.header-inner{align-items:flex-start;flex-direction:column;gap:12px;padding-block:18px}.course-list{grid-template-columns:1fr}.week-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.section{padding-block:22px}main{padding-inline:14px}th,td{padding:10px}}
+@media(max-width:390px){.week-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.week-card{min-height:80px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
